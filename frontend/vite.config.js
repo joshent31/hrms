@@ -24,13 +24,14 @@ export default defineConfig({
 			},
 			manifest: {
 				display: "standalone",
-				name: "Frappe HR",
-				short_name: "Frappe HR",
+				name: "JOSHR",
+				short_name: "JOSHR",
 				start_url: "/hrms",
 				scope: "/hrms",
 				id: "/hrms",
 				description: "Everyday HR & Payroll operations at your fingertips",
-				theme_color: "#ffffff",
+				theme_color: "#12293A",
+				background_color: "#F2EFE9",
 				icons: [
 					{
 						src: "/assets/hrms/manifest/manifest-icon-192.maskable.png",
