@@ -1,18 +1,20 @@
 app_name = "hrms"
-app_title = "Frappe HR"
+app_title = "JOSHR"
 app_publisher = "Frappe Technologies Pvt. Ltd."
 app_description = "Modern HR and Payroll Software"
 app_email = "contact@frappe.io"
 app_license = "GNU General Public License (v3)"
 required_apps = ["frappe/erpnext"]
-source_link = "http://github.com/frappe/hrms"
+source_link = "https://github.com/joshent31/hrms"
+app_logo_url = "/assets/hrms/images/joshr-logo.svg"
+app_home = "/app/hr"
 
 add_to_apps_screen = [
 	{
 		"name": "hrms",
-		"logo": "/assets/hrms/images/frappe-hr-logo.svg",
-		"title": "Frappe HR",
-		"route": "/app/hr",
+		"logo": "/assets/hrms/images/joshr-logo.svg",
+		"title": "JOSHR",
+		"route": app_home,
 		"has_permission": "hrms.hr.utils.check_app_permission",
 	}
 ]
@@ -30,7 +32,12 @@ app_include_css = "hrms.bundle.css"
 # website
 
 # include js, css files in header of web template
-# web_include_css = "/assets/hrms/css/hrms.css"
+web_include_css = "/assets/hrms/css/joshr.css"
+website_context = {
+	"favicon": "/assets/hrms/images/joshr-logo.svg",
+	"splash_image": "/assets/hrms/images/joshr-logo.svg",
+	"app_name": "JOSHR",
+}
 # web_include_js = "/assets/hrms/js/hrms.js"
 
 # include custom scss in every website theme (without file extension ".scss")

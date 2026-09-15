@@ -1,30 +1,14 @@
 <div align="center">
-	<a href="https://frappehr.com">
-		<img src="https://raw.githubusercontent.com/frappe/hrms/develop/hrms/public/images/frappe-hr-logo.png" height="128" alt="Frappe HR Logo">
-	</a>
-	<h2>Frappe HR</h2>
-	<p align="center">
-		<p>Open Source, modern, and easy-to-use HR and Payroll Software for all organizations</p>
-	</p>
-
-[![CI](https://github.com/frappe/hrms/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/frappe/hrms/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/frappe/hrms/branch/develop/graph/badge.svg?token=0TwvyUg3I5)](https://codecov.io/gh/frappe/hrms)
-
-[https://frappehr.com](https://frappehr.com)
-
-<div align="center" style="max-height: 40px;">
-	<a href="https://frappecloud.com/hrms/signup">
-		<img src=".github/try-on-f-cloud-button.svg" height="40">
-	</a>
+  <img src=".github/joshr-logo.svg" width="96" height="96" alt="JOSHR logo" />
+  <h1>JOSHR</h1>
+  <p>HR and Payroll by JOSHENT Technology</p>
 </div>
 
-</div>
+JOSHR is a branded distribution of [Frappe HR](https://github.com/frappe/hrms), with JOSHENT's navy and brass visual identity across Desk, employee self-service, and roster. It retains the upstream HR and payroll functionality and the internal `hrms` app name.
 
-## Introduction
+**Compatibility:** this branch is based on HRMS v15.64.0 and targets Frappe/ERPNext v15. Do not use the develop-based joshr-branding branch on a v15 bench.
 
-Frappe HR has everything you need to drive excellence within the company. It's a complete HRMS solution with over 13 different modules right from Employee Management, Onboarding, Leaves, to Payroll, Taxation, and more!
-
-![HRMS](hrms.png)
+See [branding and deployment](JOSHR_BRANDING.md) for installation steps and scope.
 
 ## Key Features
 
@@ -51,7 +35,7 @@ Frappe HR has everything you need to drive excellence within the company. It's a
 3. Once ERPNext is installed, add the hrms app to your bench by running
 
 	```sh
-	$ bench get-app hrms
+	$ bench get-app --branch joshr-version-15 https://github.com/joshent31/hrms.git
 	```
 4. After that, you can install the hrms app on the required site by running
 	```sh

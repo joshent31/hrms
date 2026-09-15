@@ -24,11 +24,12 @@ export default defineConfig({
 			},
 			manifest: {
 				display: "standalone",
-				name: "Frappe HR",
-				short_name: "Frappe HR",
+				name: "JOSHR",
+				short_name: "JOSHR",
 				start_url: "/hrms",
 				description: "Everyday HR & Payroll operations at your fingertips",
-				theme_color: "#ffffff",
+				theme_color: "#12293A",
+				background_color: "#F2EFE9",
 				icons: [
 					{
 						src: "/assets/hrms/manifest/manifest-icon-192.maskable.png",
@@ -111,7 +112,7 @@ function getProxyOptions() {
 function getCommonSiteConfig() {
 	let currentDir = path.resolve(".")
 	// traverse up till we find frappe-bench with sites directory
-	while (currentDir !== "/") {
+	while (currentDir !== path.parse(currentDir).root) {
 		if (
 			fs.existsSync(path.join(currentDir, "sites")) &&
 			fs.existsSync(path.join(currentDir, "apps"))
