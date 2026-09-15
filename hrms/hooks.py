@@ -1,5 +1,5 @@
 app_name = "hrms"
-app_title = "Frappe HR"
+app_title = "JOSHR"
 app_publisher = "Frappe Technologies Pvt. Ltd."
 app_description = "Modern HR and Payroll Software"
 app_email = "contact@frappe.io"
@@ -318,3 +318,13 @@ company_data_to_be_ignored = [
 	"Employee Onboarding Template",
 	"Employee Separation Template",
 ]
+
+app_logo_url = "/assets/hrms/images/joshr-logo.svg"
+
+web_include_css = "/assets/hrms/css/joshr.css"
+
+website_context = {
+	"favicon": "/assets/hrms/images/joshr-logo.svg",
+	"splash_image": "/assets/hrms/images/joshr-logo.svg",
+	"app_name": "JOSHR",
+}

@@ -1,5 +1,9 @@
+# JOSHR by JOSHENT Technology
+
+This branch retains its original HRMS version and business logic with JOSHR branding. Read [branding and deployment](JOSHR_BRANDING.md) before installation. Based on [Frappe HR](https://github.com/frappe/hrms); upstream licensing and attribution are preserved.
+
 <div align="center" markdown="1">
-<img src=".github/frappe-hr-logo.png" alt="Frappe HR logo" width="170" style="max-width: 100%;"/>
+<img src=".github/joshr-logo.svg" alt="Frappe HR logo" width="170" style="max-width: 100%;"/>
 
 Open Source, modern, and easy-to-use HR and Payroll Software for all organizations.
 
