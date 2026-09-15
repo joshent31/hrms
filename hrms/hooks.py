@@ -1,17 +1,17 @@
 app_name = "hrms"
-app_title = "Frappe HR"
+app_title = "JOSHR"
 app_publisher = "Frappe Technologies Pvt. Ltd."
 app_description = "Modern HR and Payroll Software"
 app_email = "contact@frappe.io"
 app_license = "GNU General Public License (v3)"
 required_apps = ["frappe/erpnext"]
-source_link = "http://github.com/frappe/hrms"
+source_link = "https://github.com/joshent31/hrms"
 
 add_to_apps_screen = [
 	{
 		"name": "hrms",
-		"logo": "/assets/hrms/images/frappe-hr-logo.svg",
-		"title": "Frappe HR",
+		"logo": "/assets/hrms/images/joshr-logo.svg",
+		"title": "JOSHR",
 		"route": "/app/hr",
 		"has_permission": "hrms.hr.utils.check_app_permission",
 	}
@@ -369,3 +369,13 @@ company_data_to_be_ignored = [
 	"Employee Onboarding Template",
 	"Employee Separation Template",
 ]
+
+app_logo_url = "/assets/hrms/images/joshr-logo.svg"
+
+web_include_css = "/assets/hrms/css/joshr.css"
+
+website_context = {
+	"favicon": "/assets/hrms/images/joshr-logo.svg",
+	"splash_image": "/assets/hrms/images/joshr-logo.svg",
+	"app_name": "JOSHR",
+}
