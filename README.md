@@ -1,35 +1,12 @@
 <div align="center">
-	<a href="https://frappe.io/hr">
-		<img src=".github/frappe-hr-logo.png" height="80px" width="80px" alt="Frappe HR Logo">
-	</a>
-	<h2>Frappe HR</h2>
-	<p align="center">
-		<p>Open Source, modern, and easy-to-use HR and Payroll Software</p>
-	</p>
-
-[![CI](https://github.com/frappe/hrms/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/frappe/hrms/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/frappe/hrms/branch/develop/graph/badge.svg?token=0TwvyUg3I5)](https://codecov.io/gh/frappe/hrms)
-
-<a href="https://trendshift.io/repositories/10972" target="_blank"><img src="https://trendshift.io/api/badge/repositories/10972" alt="frappe%2Fhrms | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+  <img src=".github/joshr-logo.svg" width="96" height="96" alt="JOSHR logo" />
+  <h1>JOSHR</h1>
+  <p>HR and Payroll by JOSHENT Technology</p>
 </div>
 
-<div align="center">
-	<img src=".github/hrms-hero.png"/>
-</div>
+JOSHR is a branded distribution of [Frappe HR](https://github.com/frappe/hrms), with JOSHENT's navy and brass visual identity across Desk, employee self-service, and roster. It retains the upstream HR and payroll functionality and the internal `hrms` app name.
 
-<div align="center">
-	<a href="https://frappe.io/hr">Website</a>
-	-
-	<a href="https://docs.frappe.io/hr/introduction">Documentation</a>
-</div>
-
-## Frappe HR
-
-Frappe HR has everything you need to drive excellence within the company. It's a complete HRMS solution with over 13 different modules right from Employee Management, Onboarding, Leaves, to Payroll, Taxation, and more!
-
-## Motivation
-When Frappe team started growing in terms of size, we needed an open-source HR and Payroll software. We didn't find any "true" open-source HR software out there and so decided to build one ourselves.
-Initially, it was a set of modules within ERPNext but version 14 onwards, as the modules became more mature, Frappe HR was created as a separate product.
+See [branding and deployment](JOSHR_BRANDING.md) for installation steps and scope.
 
 ## Key Features
 

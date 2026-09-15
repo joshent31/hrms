@@ -1,9 +1,9 @@
 <template>
-	<div class="h-12 bg-white border-b px-12 flex items-center">
+	<div class="h-14 bg-white border-b-2 border-[#c99b4a] px-4 sm:px-12 flex items-center">
 		<div class="flex items-center space-x-1.5">
 			<a href="/desk/hr-setup" class="text-gray-600 hover:text-gray-700 flex items-center">
 				<FrappeHRLogo class="h-6 w-6 mr-2.5" />
-				Frappe HR
+				JOSHR
 			</a>
 			<FeatherIcon name="chevron-right" class="h-4 w-4" />
 			<span class="font-medium">Roster</span>
