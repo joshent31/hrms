@@ -31,11 +31,11 @@
 				</div>
 			</div>
 
-			<div v-else class="flex h-screen w-screen flex-col justify-center bg-white">
+			<div v-else class="joshr-login flex min-h-screen w-full flex-col justify-center">
 				<div class="flex flex-col mx-auto gap-3 items-center">
-					<FrappeHRLogo class="h-8 w-8" />
+					<FrappeHRLogo class="h-16 w-16" />
 					<div class="text-3xl font-semibold text-gray-900 text-center">
-						{{ __("Login to Frappe HR") }}
+						{{ __("Login to JOSHR") }}
 					</div>
 				</div>
 
