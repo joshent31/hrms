@@ -28,3 +28,12 @@ body {
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
 }
+
+/* Shared JOSHR interaction styling; status colors retain their meaning. */
+:root { --joshr-navy: #12293a; --joshr-brass: #e8c27a; }
+body { background: #f2efe9; }
+:where(button, a, input, select, textarea):focus-visible { outline: 2px solid #856125; outline-offset: 3px; }
+button.bg-gray-900, a.bg-gray-900 { background-color: #12293a; }
+button.bg-gray-900:hover, a.bg-gray-900:hover { background-color: #0b1a24; }
+.joshr-login { background: radial-gradient(ellipse at top, #fff 25%, #f2efe9 100%); border-top: 5px solid #c99b4a; padding-block: 2rem; }
+ion-tab-bar { border-top: 2px solid #c99b4a; }
