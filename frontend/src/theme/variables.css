@@ -4,18 +4,18 @@ http://ionicframework.com/docs/theming/ */
 /** Ionic CSS Variables **/
 
 :root {
-	--ion-background-color: #f4f5f6;
+	--ion-background-color: #f2efe9;
 	--ion-font-family: "InterVar", sans-serif;
-	--ion-tab-bar-color-selected: #525252;
-	--ion-tab-bar-background-focused: #e2e2e2;
+	--ion-tab-bar-color-selected: #12293a;
+	--ion-tab-bar-background-focused: #eee4d2;
 
 	/** primary **/
-	--ion-color-primary: #3880ff;
-	--ion-color-primary-rgb: 56, 128, 255;
+	--ion-color-primary: #12293a;
+	--ion-color-primary-rgb: 18, 41, 58;
 	--ion-color-primary-contrast: #ffffff;
 	--ion-color-primary-contrast-rgb: 255, 255, 255;
-	--ion-color-primary-shade: #3171e0;
-	--ion-color-primary-tint: #4c8dff;
+	--ion-color-primary-shade: #0b1a24;
+	--ion-color-primary-tint: #29485e;
 
 	/** secondary **/
 	--ion-color-secondary: #3dc2ff;
