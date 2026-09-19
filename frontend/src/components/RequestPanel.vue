@@ -1,5 +1,6 @@
 <template>
-	<div class="w-full">
+	<div class="w-full joshr-requests">
+		<h2 class="joshr-section-title">{{ __("Requests") }}</h2>
 		<TabButtons
 			:buttons="TAB_BUTTONS"
 			v-model="activeTab"

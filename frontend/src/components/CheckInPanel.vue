@@ -1,19 +1,20 @@
 <template>
-	<div class="flex flex-col bg-white rounded w-full py-6 px-4 border-none">
+	<div class="joshr-checkin">
+		<p class="joshr-eyebrow">{{ __("AT A GLANCE") }}</p>
 		<h2 class="text-lg font-bold text-gray-900">
-			{{ __("Hey, {0} 👋", [employee?.data?.first_name]) }}
+			{{ __("Hey, {0} 👋", [employee?.data?.first_name || __("there")]) }}
 		</h2>
 
 		<template v-if="settings.data?.allow_employee_checkin_from_mobile_app">
 			<div class="font-medium text-sm text-gray-500 mt-1.5" v-if="lastLog">
 				<span>{{ __("Last {0} was at {1}", [__(lastLogType), formatTimestamp(lastLog.time)]) }}</span>
 				<span class="whitespace-pre"> &middot; </span>
-				<router-link :to="{ name: 'EmployeeCheckinListView' }" v-slot="{ navigate }">
-					<span @click="navigate" class="underline">{{ __("View List") }}</span>
+				<router-link :to="{ name: 'EmployeeCheckinListView' }" >
+					<span class="underline">{{ __("View List") }}</span>
 				</router-link>
 			</div>
 			<Button
-				class="mt-4 mb-1 drop-shadow-sm py-5 text-base"
+				class="joshr-checkin-button mt-4 mb-1 py-5 text-base"
 				id="open-checkin-modal"
 				:loading="checkins.list.loading"
 				@click="handleEmployeeCheckin"

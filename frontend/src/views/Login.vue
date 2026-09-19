@@ -33,13 +33,14 @@
 
 			<div v-else class="joshr-login flex min-h-screen w-full flex-col justify-center">
 				<div class="flex flex-col mx-auto gap-3 items-center">
-					<FrappeHRLogo class="h-16 w-16" />
+					<FrappeHRLogo class="joshr-login-mark h-16 w-16" />
+					<p class="joshr-eyebrow">{{ __("YOUR PEOPLE. YOUR SPACE.") }}</p>
 					<div class="text-3xl font-semibold text-gray-900 text-center">
-						{{ __("Login to JOSHR") }}
+						{{ __("Welcome to JOSHR") }}
 					</div>
 				</div>
 
-				<div class="mx-auto mt-10 w-full px-8 sm:w-96">
+				<div class="joshr-login-form mx-auto mt-10 w-full px-8 sm:w-96">
 					<form v-if="!user_pass_login_disabled.data" class="flex flex-col space-y-4" @submit.prevent="submit">
 						<Input
 							:label="__('Email')"

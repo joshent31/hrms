@@ -1,8 +1,8 @@
 <template>
 	<ion-page>
-		<ion-header class="ion-no-border">
-			<div class="w-full sm:w-96">
-				<div class="flex flex-col bg-white shadow-sm p-4">
+		<ion-header class="ion-no-border joshr-header">
+			<div class="joshr-shell">
+				<div class="joshr-header-inner">
 					<div class="flex flex-row justify-between items-center">
 						<div class="flex flex-row items-center gap-2">
 							<FrappeHRLogo class="h-8 w-8" />
@@ -13,10 +13,10 @@
 						<div class="flex flex-row items-center gap-3 ml-auto">
 							<router-link
 								:to="{ name: 'Notifications' }"
-								v-slot="{ navigate }"
-								class="flex flex-col items-center"
+								:aria-label="__('Notifications')"
+								class="joshr-header-action"
 							>
-								<span class="relative inline-block" @click="navigate">
+								<span class="relative inline-block">
 									<FeatherIcon name="bell" class="h-6 w-6" />
 									<span
 										v-if="unreadNotificationsCount.data"
@@ -27,11 +27,12 @@
 							</router-link>
 							<router-link
 								:to="{ name: 'Profile' }"
-								class="flex flex-col items-center"
+								:aria-label="__('My profile')"
+								class="joshr-header-action"
 							>
 								<Avatar
-									:image="user.data.user_image"
-									:label="user.data.first_name"
+									:image="user.data?.user_image"
+									:label="user.data?.first_name"
 									size="xl"
 								/>
 							</router-link>
@@ -41,8 +42,8 @@
 			</div>
 		</ion-header>
 
-		<ion-content class="ion-no-padding">
-			<div class="flex flex-col h-screen w-screen sm:w-96">
+		<ion-content class="ion-no-padding joshr-content">
+			<div class="joshr-shell joshr-page-body">
 				<slot name="body"></slot>
 			</div>
 		</ion-content>

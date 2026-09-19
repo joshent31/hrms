@@ -7,7 +7,10 @@ import { createAnimation, iosTransitionAnimation } from "@ionic/core"
  */
 
 export const animationBuilder = (baseEl, opts) => {
-	if (opts.direction === "back") {
+	if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+		return iosTransitionAnimation(baseEl, opts).duration(0)
+	}
+	if (isPlatform("iphone") && opts.direction === "back") {
 		/**
 		 * Even after disabling swipeBackEnabled, when the swipe is completed & we're back on the first screen
 		 * the "pop" animation is triggered, resulting in a double animation
@@ -16,11 +19,11 @@ export const animationBuilder = (baseEl, opts) => {
 		return createAnimation()
 	}
 
-	return iosTransitionAnimation(baseEl, opts)
+	return iosTransitionAnimation(baseEl, opts).duration(240)
 }
 
 const getIonicConfig = () => {
-	const config = { mode: "ios" }
+	const config = { mode: "ios", navAnimation: animationBuilder }
 
 	if (isPlatform("iphone")) {
 		// disable ionic's swipe back gesture on ios

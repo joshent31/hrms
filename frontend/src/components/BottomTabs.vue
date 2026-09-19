@@ -1,7 +1,7 @@
 <template>
 	<ion-tab-bar
 		slot="bottom"
-		class="bg-white shadow-md sm:w-96 py-2 pb-2 standalone:pb-safe-bottom"
+		class="joshr-tab-bar"
 	>
 		<ion-tab-button
 			v-for="item in tabItems"
@@ -9,13 +9,13 @@
 			:tab="item.title"
 			:href="item.route"
 			:class="[
-				'bg-white text-xs space-y-1.5 !hover:border-gray-300 !hover:text-gray-700 transition active:scale-95',
+				'joshr-tab',
 				route.path === item.route
-					? 'border-gray-900 text-gray-800 font-semibold'
-					: 'text-gray-600 font-normal',
+					? 'joshr-tab-active'
+					: 'joshr-tab-idle',
 			]"
 		>
-			<component :is="item.icon" class="h-5 w-5" />
+			<span class="joshr-tab-icon"><component :is="item.icon" class="h-5 w-5" aria-hidden="true" /></span>
 			<div>{{ item.title }}</div>
 		</ion-tab-button>
 	</ion-tab-bar>
@@ -24,7 +24,7 @@
 <script setup>
 import { useRoute } from "vue-router"
 
-import { IonTabBar, IonTabButton, IonLabel } from "@ionic/vue"
+import { IonTabBar, IonTabButton } from "@ionic/vue"
 
 import HomeIcon from "@/components/icons/HomeIcon.vue"
 import LeaveIcon from "@/components/icons/LeaveIcon.vue"

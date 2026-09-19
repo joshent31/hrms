@@ -1,9 +1,13 @@
 <template>
 	<BaseLayout>
 		<template #body>
-			<div class="flex flex-col items-center my-7 p-4 gap-7">
+			<div class="joshr-home">
+				<div class="joshr-home-heading">
+					<p class="joshr-eyebrow">{{ __("YOUR WORKDAY") }}</p>
+					<h1>{{ __("A little clarity. A better day.") }}</h1>
+				</div>
 				<CheckInPanel />
-				<QuickLinks :items="quickLinks" :title="__('Quick Links')" />
+				<QuickLinks :items="quickLinks" :title="__('What would you like to do?')" />
 				<RequestPanel />
 			</div>
 		</template>
