@@ -33,8 +33,36 @@ body {
 :root { --joshr-navy: #12293a; --joshr-brass: #e8c27a; }
 body { background: #f2efe9; }
 :where(button, a, input, select, textarea):focus-visible { outline: 2px solid #856125; outline-offset: 3px; }
-button.bg-gray-900, a.bg-gray-900 { background-color: #12293a; }
-button.bg-gray-900:hover, a.bg-gray-900:hover { background-color: #0b1a24; }
+/* Support both legacy gray utilities and Frappe UI's semantic button classes.
+   Keep these scoped to controls: overlays and red/green status actions retain
+   their own colors. The check-in card's brass button overrides these rules. */
+:is(button, a):is(.bg-gray-900, .bg-surface-gray-7, .bg-black) {
+  background-color: #12293a;
+  color: #ffffff;
+}
+:is(button, a):is(.bg-gray-900, .bg-surface-gray-7, .bg-black):hover:not(:disabled) {
+  background-color: #20485b;
+  color: #ffffff;
+}
+:is(button, a):is(.bg-gray-900, .bg-surface-gray-7, .bg-black):active:not(:disabled) {
+  background-color: #0b1a24;
+  color: #ffffff;
+}
+:is(button, a):is(.bg-gray-900, .bg-surface-gray-7, .bg-black):focus-visible {
+  outline: 2px solid #c99b4a;
+  outline-offset: 3px;
+  --tw-ring-color: #c99b4a;
+}
+button:disabled:is(.bg-gray-900, .bg-gray-700, .bg-surface-gray-7, .bg-surface-gray-2, .bg-black) {
+  background-color: #e4e9ec;
+  color: #536775;
+  cursor: not-allowed;
+}
+.joshr-checkin .joshr-checkin-button:disabled {
+  background-color: #e4e9ec;
+  color: #536775;
+  cursor: not-allowed;
+}
 .joshr-login { background: radial-gradient(ellipse at top, #fff 25%, #f2efe9 100%); border-top: 5px solid #c99b4a; padding-block: 2rem; }
 ion-tab-bar { border-top: 2px solid #c99b4a; }
 
@@ -55,7 +83,7 @@ ion-tab-bar { border-top: 2px solid #c99b4a; }
 .joshr-checkin h2 { color: #fff; font-size: 22px; }
 .joshr-checkin .text-gray-500 { color: #d3dfe4; line-height: 1.6; }
 .joshr-checkin .joshr-checkin-button { background: #e8c27a; color: #12293a; min-height: 48px; width: 100%; border-radius: 14px; font-weight: 650; }
-.joshr-checkin .joshr-checkin-button:hover { background: #f0d49d; }
+.joshr-checkin .joshr-checkin-button:hover:not(:disabled) { background: #f0d49d; }
 .joshr-section-title { font-size: 17px; line-height: 1.4; font-weight: 650; color: var(--joshr-ink); margin-bottom: 14px; letter-spacing: -.3px; }
 .joshr-action-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .joshr-action-card { position: relative; padding: 18px 14px; border: 1px solid #e7e5e0; border-radius: 18px; background: #fff; min-height: 112px; transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease; }
