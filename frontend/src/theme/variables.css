@@ -3,19 +3,19 @@ http://ionicframework.com/docs/theming/ */
 
 /** Ionic CSS Variables **/
 
-:root {
-	--ion-background-color: #f2efe9;
+body.joshr-mobile {
+	--ion-background-color: #f8f9ff;
 	--ion-font-family: "InterVar", sans-serif;
-	--ion-tab-bar-color-selected: #12293a;
-	--ion-tab-bar-background-focused: #eee4d2;
+	--ion-tab-bar-color-selected: #0f1e36;
+	--ion-tab-bar-background-focused: #ffdf98;
 
 	/** primary **/
-	--ion-color-primary: #12293a;
-	--ion-color-primary-rgb: 18, 41, 58;
+	--ion-color-primary: #0f1e36;
+	--ion-color-primary-rgb: 15, 30, 54;
 	--ion-color-primary-contrast: #ffffff;
 	--ion-color-primary-contrast-rgb: 255, 255, 255;
-	--ion-color-primary-shade: #0b1a24;
-	--ion-color-primary-tint: #29485e;
+	--ion-color-primary-shade: #000412;
+	--ion-color-primary-tint: #344767;
 
 	/** secondary **/
 	--ion-color-secondary: #3dc2ff;

@@ -28,8 +28,8 @@ export default defineConfig({
 				short_name: "JOSHR",
 				start_url: "/hrms",
 				description: "Everyday HR & Payroll operations at your fingertips",
-				theme_color: "#12293A",
-				background_color: "#F2EFE9",
+				theme_color: "#0F1E36",
+				background_color: "#F8F9FF",
 				icons: [
 					{
 						src: "/assets/hrms/manifest/manifest-icon-192.maskable.png",
