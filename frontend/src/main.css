@@ -121,8 +121,20 @@ ion-tab-bar { border-top: 2px solid #d4af37; }
    the body marker also covers Vue dialogs teleported outside the app root. */
 body.joshr-mobile {
   color: #0b1c30;
+  --joshr-page-background:
+    radial-gradient(ellipse at 100% 0%, #d4af3726 0%, transparent 48%),
+    radial-gradient(ellipse at 0% 45%, #7386a921 0%, transparent 55%),
+    linear-gradient(160deg, #eff4ff 0%, #f8f9ff 55%, #fff8e8 100%);
   --ion-background-color: #f8f9ff;
   --ion-text-color: #0b1c30;
+}
+/* Ionic paints its content inside a shadow root. Use its background variable
+   so dashboard and form screens share the same light navy/gold backdrop. */
+body.joshr-mobile ion-content {
+  --background: var(--joshr-page-background);
+}
+body.joshr-mobile .joshr-login {
+  background: var(--joshr-page-background);
 }
 body.joshr-mobile :is(.text-gray-800, .text-gray-900, .text-ink-gray-9) { color: #0b1c30; }
 body.joshr-mobile :is(.text-gray-500, .text-gray-600, .text-gray-700, .text-ink-gray-5, .text-ink-gray-6) { color: #44474d; }
