@@ -44,6 +44,12 @@
 
 		<ion-content class="ion-no-padding joshr-content">
 			<div class="joshr-shell joshr-page-body">
+				<section v-if="intro" class="joshr-dashboard-hero">
+					<div class="joshr-hero-icon"><FeatherIcon :name="icon" class="h-6 w-6" /></div>
+					<p class="joshr-eyebrow">{{ __('JOSHR • PEOPLE & WORK') }}</p>
+					<h1>{{ pageTitle }}</h1>
+					<p>{{ intro }}</p>
+				</section>
 				<slot name="body"></slot>
 			</div>
 		</ion-content>
@@ -62,6 +68,8 @@ import { inject } from "vue"
 const user = inject("$user")
 
 const props = defineProps({
+	intro: { type: String, default: "" },
+	icon: { type: String, default: "grid" },
 	pageTitle: {
 		type: String,
 		required: false,

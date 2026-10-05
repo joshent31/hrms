@@ -1,7 +1,7 @@
 <template>
-	<BaseLayout :pageTitle="__('Leaves & Holidays')">
+	<BaseLayout :pageTitle="__('Leaves & Holidays')" :intro="__('Plan your time away and keep track of every request.')" icon="sun">
 		<template #body>
-			<div class="flex flex-col items-center mt-7 mb-7 py-4">
+			<div class="joshr-dashboard flex flex-col items-center py-4">
 				<LeaveBalance />
 
 				<div class="flex flex-col gap-7 mt-5 px-4 w-full">
@@ -12,7 +12,7 @@
 						<Button
 							@click="navigate"
 							variant="solid"
-							class="py-5 text-base w-full"
+							class="joshr-primary-action py-5 text-base w-full"
 						>
 							{{ __("Request a Leave") }}
 						</Button>

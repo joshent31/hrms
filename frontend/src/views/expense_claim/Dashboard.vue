@@ -1,7 +1,7 @@
 <template>
-	<BaseLayout :pageTitle="__('Expense Claims')">
+	<BaseLayout :pageTitle="__('Expense Claims')" :intro="__('Manage your claims, reimbursements and advance balances.')" icon="credit-card">
 		<template #body>
-			<div class="flex flex-col mt-7 mb-7 p-4 gap-7">
+			<div class="joshr-dashboard flex flex-col p-4 gap-7">
 				<ExpenseClaimSummary />
 
 				<div class="w-full">
@@ -12,7 +12,7 @@
 						<Button
 							@click="navigate"
 							variant="solid"
-							class="w-full py-5 text-base"
+							class="joshr-primary-action w-full py-5 text-base"
 						>
 							{{ __("Claim an Expense") }}
 						</Button>

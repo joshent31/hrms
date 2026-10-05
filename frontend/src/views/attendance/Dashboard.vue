@@ -1,11 +1,11 @@
 <template>
-	<BaseLayout :pageTitle="__('Attendance')">
+	<BaseLayout :pageTitle="__('Attendance')" :intro="__('Your workdays, shifts and attendance requests in one place.')" icon="clock">
 		<template #body>
-			<div class="flex flex-col mt-7 mb-7 p-4 gap-7">
+			<div class="joshr-dashboard flex flex-col p-4 gap-7">
 				<AttendanceCalendar />
 				<div class="w-full">
 					<router-link :to="{ name: 'AttendanceRequestFormView' }" v-slot="{ navigate }">
-						<Button @click="navigate" variant="solid" class="w-full py-5 text-base">
+						<Button @click="navigate" variant="solid" class="joshr-primary-action w-full py-5 text-base">
 							{{ __("Request Attendance") }}
 						</Button>
 					</router-link>
@@ -31,7 +31,7 @@
 				</div>
 				<div class="w-full">
 					<router-link :to="{ name: 'ShiftRequestFormView' }" v-slot="{ navigate }">
-						<Button @click="navigate" variant="solid" class="w-full py-5 text-base">
+						<Button @click="navigate" variant="solid" class="joshr-primary-action w-full py-5 text-base">
 							{{ __("Request a Shift") }}
 						</Button>
 					</router-link>

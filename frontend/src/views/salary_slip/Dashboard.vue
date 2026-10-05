@@ -1,7 +1,7 @@
 <template>
-	<BaseLayout :pageTitle="__('Salary Slips')">
+	<BaseLayout :pageTitle="__('Salary Slips')" :intro="__('Your earnings and payslips, clearly organised by payroll period.')" icon="briefcase">
 		<template #body>
-			<div class="flex flex-col items-center my-7 p-4">
+			<div class="joshr-dashboard flex flex-col items-center p-4">
 				<div class="flex flex-col w-full bg-white rounded py-5 px-3.5 gap-5">
 					<div v-if="lastSalarySlip && lastSalarySlip.year_to_date" class="flex flex-col w-full gap-1.5">
 						<span class="text-gray-600 text-sm font-medium leading-5">

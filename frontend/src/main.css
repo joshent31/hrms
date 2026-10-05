@@ -143,3 +143,54 @@ body.joshr-mobile :is(input, textarea, select) { accent-color: #775a00; }
 body.joshr-mobile .joshr-chart-gold { color: #d4af37; }
 body.joshr-mobile .joshr-chart-navy { color: #0f1e36; }
 body.joshr-mobile .joshr-chart-blue { color: #7386a9; }
+
+/* Branded dashboard composition and shared request/form surfaces. */
+body.joshr-mobile .joshr-dashboard-hero {
+  position: relative;
+  margin: 20px 16px 4px;
+  padding: 24px 20px;
+  border-radius: 24px;
+  background: radial-gradient(ellipse at top right, #d4af3745, transparent 70%),
+    linear-gradient(135deg, #0f1e36, #344767);
+  color: #fff;
+  box-shadow: 0 12px 28px #0f1e3620;
+}
+.joshr-dashboard-hero .joshr-eyebrow { color: #ffdf98; padding-right: 44px; }
+.joshr-dashboard-hero h1 { font-size: 26px; font-weight: 700; line-height: 1.2; margin: 12px 0 8px; letter-spacing: -.6px; }
+.joshr-dashboard-hero > p:last-child { color: #e4ebf7; font-size: 13px; line-height: 1.6; max-width: 32ch; }
+.joshr-hero-icon { position: absolute; right: 18px; top: 20px; padding: 10px; border-radius: 14px; color: #ffdf98; background: #ffffff16; border: 1px solid #d4af3740; }
+body.joshr-mobile .joshr-dashboard { gap: 24px; padding-bottom: 32px; }
+body.joshr-mobile .joshr-dashboard .text-lg.font-bold { font-size: 16px; letter-spacing: -.2px; }
+body.joshr-mobile .joshr-dashboard .bg-white,
+body.joshr-mobile .joshr-request-list {
+  border-radius: 20px;
+  border: 1px solid #7386a926;
+  box-shadow: 0 6px 20px #0f1e3608;
+}
+body.joshr-mobile .joshr-empty-state {
+  margin-top: 14px;
+  min-height: 96px;
+  justify-content: center;
+  border: 1px dashed #7386a94d;
+  border-radius: 20px;
+  background: linear-gradient(120deg, #ffffffcc, #fff8e8aa);
+  color: #344767;
+}
+/* Explicit action class avoids depending on a particular Frappe UI version. */
+body.joshr-mobile :is(.joshr-primary-action, button.bg-gray-900, button.bg-surface-gray-7, button.bg-black):not(:disabled) {
+  background: linear-gradient(115deg, #0f1e36, #344767 68%, #775a00);
+  color: #fff;
+  border: 1px solid #d4af3770;
+  border-radius: 16px;
+  min-height: 48px;
+  box-shadow: 0 6px 14px #0f1e361a;
+}
+body.joshr-mobile :is(.joshr-primary-action, button.bg-gray-900, button.bg-surface-gray-7, button.bg-black):hover:not(:disabled) {
+  background: linear-gradient(115deg, #344767, #0f1e36 68%, #775a00);
+  color: #fff;
+}
+body.joshr-mobile .joshr-primary-action:disabled { background: #dce9ff; color: #44474d; box-shadow: none; }
+body.joshr-mobile .joshr-header-action { background: linear-gradient(135deg, #eff4ff, #fff8e8); border: 1px solid #d4af3730; }
+body.joshr-mobile .joshr-form-panel { width: 100%; max-width: 30rem; margin-inline: auto; background: var(--joshr-page-background); }
+body.joshr-mobile .joshr-form-panel > header { border-bottom: 2px solid #d4af37; color: #0f1e36; }
+body.joshr-mobile .joshr-form-panel > .grow { margin: 12px; border-radius: 20px; border: 1px solid #7386a926; }

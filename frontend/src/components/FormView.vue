@@ -1,6 +1,6 @@
 <template>
-	<div class="flex flex-col h-full w-full" v-if="isFormReady">
-		<div class="w-full h-full bg-white sm:w-96 flex flex-col">
+	<div class="joshr-form-view flex flex-col h-full w-full" v-if="isFormReady">
+		<div class="joshr-form-panel w-full h-full bg-white sm:w-96 flex flex-col">
 			<header
 				class="flex flex-row bg-white shadow-sm py-4 px-3 items-center sticky top-0 z-[1000]"
 			>
