@@ -89,6 +89,7 @@ ion-tab-bar { border-top: 2px solid #d4af37; }
 .joshr-action-card { position: relative; padding: 18px 14px; border: 1px solid #c5c6ce; border-radius: 18px; background: #fff; min-height: 112px; transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease; }
 .joshr-action-content { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
 .joshr-action-content > div { font-size: 13px; line-height: 1.45; font-weight: 600; color: var(--joshr-ink); overflow-wrap: anywhere; }
+.joshr-action-description { margin-top: 3px; font-size: 11px; line-height: 1.35; font-weight: 500; color: var(--joshr-muted); }
 .joshr-action-icon { width: 24px; height: 24px; color: #0f1e36; }
 .joshr-action-arrow { position: absolute; top: 18px; right: 14px; width: 14px; height: 14px; color: #75777e; }
 @media (hover: hover) { .joshr-action-card:hover { transform: translateY(-3px); box-shadow: 0 8px 18px #0f1e360d; border-color: #d4af37; } }
